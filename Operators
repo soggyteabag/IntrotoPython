@@ -1,0 +1,113 @@
+This is my Introduction to learning Python via Makers intro to Programming series on Replit
+
+Here I will document some of the useful code and lessons I want to remember and come back to as I complete the series. 
+
+Operators 
+
+Arithematic Operators 
++ : Addition (e.g., a + b)
+- : Subtraction (e.g., a - b)
+* : Multiplication (e.g., a * b)
+/ : Division (e.g., a / b)
+% : Modulus (returns the remainder) (e.g., a % b)
+** : Exponentiation (e.g., a ** b)
+// : Floor division (returns the integer part of the division) (e.g., a // b)
+
+For instance 
+def add_one(num):
+  return num + 1
+
+This will return a number inputed with 1 added to it
+
+Here is another example from a task set by Makers 
+def add_numbers(a, b):
+  return a + b
+
+This will return the input numbers added together 
+
+Comparison Operators 
+
+== : Equal to (e.g., a == b)
+!= : Not equal to (e.g., a != b)
+> : Greater than (e.g., a > b)
+< : Less than (e.g., a < b)
+>= : Greater than or equal to (e.g., a >= b)
+<= : Less than or equal to (e.g., a <= b)
+
+Below is a Comparison task given to us: 
+using the def code it will return whether or not the following statements were true or not.
+
+def a_is_greater_than_b(a, b):
+  return a > b
+  pass
+
+check_that_these_are_equal(
+  a_is_greater_than_b(1, 2),
+  False
+)
+
+check_that_these_are_equal(
+  a_is_greater_than_b(1, 1),
+  False
+)
+
+check_that_these_are_equal(
+  a_is_greater_than_b(2, 1),
+  True
+)
+
+Logical Operators 
+
+and : Returns True if both statements are true (e.g., a and b)
+or : Returns True if one of the statements is true (e.g., a or b)
+not : Reverses the result (returns False if the result is true) (e.g., not a)
+
+
+and
+
+age = 25
+has_id = True
+
+# Check if the person is 18 or older and has an ID
+if age >= 18 and has_id:
+    print("You are allowed to enter.")
+else:
+    print("You are not allowed to enter.")
+
+
+or
+
+is_raining = False
+has_umbrella = True
+
+# Check if it's raining or if the person has an umbrella
+if is_raining or has_umbrella:
+    print("You can go outside.")
+else:
+    print("Better stay indoors.")
+
+not
+
+is_tired = False
+
+# Check if the person is not tired
+if not is_tired:
+    print("You can keep working.")
+else:
+    print("Take a rest.")
+
+
+and or not
+
+is_weekend = True
+is_holiday = False
+has_work = False
+
+# Check if it's the weekend, or it's a holiday, and you don't have work
+if (is_weekend or is_holiday) and not has_work:
+    print("You can relax today.")
+else:
+    print("Time to work.")
+
+
+
