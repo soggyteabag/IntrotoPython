@@ -1,0 +1,30 @@
+i = 0 # We call this the counter variable
+while i < 10:
+  print(f"The number is now {i}")
+  i = i + 1
+
+# The `while` loop is like an `if`, in that it takes an
+# expression that evaluates to True or False, and then
+# executes its block of code if the condition is True.
+
+# However, the `while` loop is different in that it keeps
+# repeatedly executing the block for as long as the
+# condition is True.
+
+TASK:
+
+# Write a function that adds the item "cats" to the given
+# word_list, repeatedly, a number of times defined by the
+# given count parameter.
+# Example:
+#    add_cats_repeatedly([], 3)
+# => ['cats', 'cats', 'cats']
+
+Solution:
+
+def add_cats_repeatedly(word_list, count):
+  i = 0     #we need to first create the variable
+  while i < count:    #we then add the loop function (in this case less than) 
+    word_list.append("cats")      #we've created the variables and the loop so now we need to add the item requested "cats" in this case to the list as it was not there before
+    i = i + 1       #this is the most important step. without the counting variable for addition we would create an infinite loop and the programme would run forever
+  return word_list    #finally we return the list with our edits
