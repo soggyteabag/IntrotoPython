@@ -1,0 +1,57 @@
+For Loops
+
+for letter in ["1", "2", "3"]:
+    print (f"This number is {letter}")
+#This will print out the entire list 1, 2, 3.
+
+for number in range(0, 10):
+    print(f"This number is {number}")
+#This will print out the numbers within our specified range 0-10 
+
+#This 'while' version will print out the same thing
+
+def print_numbers_in_range_with_a_while():
+  number = 0
+  while number < 10:
+    print(f"This number is {number}")
+    number = number + 1
+
+
+
+MAPPING
+
+
+words = ['I', 'need', 'another', 'five', 'years']
+
+first_letters = [] # This is our accumulator again
+
+for word in words: # We go through each word
+  first_letter = word[0] # Get the first letter
+  # And append it to our accumulator list:
+  first_letters.append(first_letter)
+
+print(words)
+print(first_letters)
+
+
+
+
+# Return a new list of each number with 100 added
+
+def add_one_hundred_to_numbers(numbers):
+  new_numbers = []
+  for number in numbers:
+    new_numbers.append(number + 100)
+  return (new_numbers)
+
+
+
+# Return a new list with only the positive numbers
+
+def only_positive_numbers(numbers):
+  positive_number = []
+  for number in numbers:
+    if number > 0:
+      positive_number.append(number)
+  return positive_number
+  
