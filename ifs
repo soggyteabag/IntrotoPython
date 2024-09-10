@@ -64,3 +64,18 @@ elif season == "winter":
   print("Stay warm by the fire and watch the snow fall.")
 else: 
   print("I don't know that season. Please try again.")
+
+#Here is another if variation that I wrote using Replits prompts and my own inputs:
+
+tvshow = input("What is your favourite tv show?")
+if tvshow == "the bear": 
+  print("Carmy")
+  favecharacter = input("who is your fave character?")
+  if favecharacter == "chef":
+    print("right answer")
+  else:
+    print("Nah, chef")
+elif tvshow == "breaking bad":
+  print("Yooo Mr White")
+else:
+  print("Yeah, that's cool whatever man")
