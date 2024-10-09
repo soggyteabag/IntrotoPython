@@ -1,0 +1,17 @@
+% = taking the remainder of a sum 
+
+
+x = input("What's x? ")
+y = input("What's y? ")
+
+z = int(x) + int(y) 
+# if we dont include the int before our strings x and y will just print literally as they are
+
+print(z) 
+
+#we can also print it like this: 
+
+x = int(input("What's x? "))
+y = int(input("What's y? "))
+
+print(x + y) 
