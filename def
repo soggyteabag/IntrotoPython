@@ -1,0 +1,35 @@
+1)
+
+def hello():
+    print("hello, ")
+
+name = input("What's your name ?")
+hello(name) 
+
+2)
+this will allow us to order functions in any order we want
+
+def main():
+    name = input("Whats your name)
+    hello(name)
+
+def hello(to="world")
+    print("hello,", to)
+
+main()
+
+3)
+Calculator
+
+def main():
+    x = int(input("What's x? "))
+    print(" x squared is", square(x)) 
+
+def square(n):
+    return n * n
+# we can play around with the return value here to get different outcomes 
+# for instance n ** 2 (raised to the power of 2)
+# pow(n, 2) n to the power of 
+
+main()
+
