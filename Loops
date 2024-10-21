@@ -55,3 +55,13 @@ def only_positive_numbers(numbers):
       positive_number.append(number)
   return positive_number
   
+We use loops when:
+
+We need to check multiple items
+We don't know which item we're looking for
+We need to find patterns
+
+We don't need loops when:
+
+We know exactly what we're searching for
+We can use a direct method like index() to find it
