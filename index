@@ -1,0 +1,97 @@
+different ways to use indexing:
+
+- Finding multiple occurrences
+- Working with relative positions
+- Combining with other string/array methods
+- Pattern matching
+- Sorting and searching
+
+Write a function findNeedle() that takes an array full of junk but containing one "needle"
+After your function finds the needle it should return a message (as a string) that says:
+"found the needle at position " plus the index it found the needle:
+
+Here's a simple solution:
+def findNeedle(haystack):
+    return f"found the needle at position {haystack.index('needle')}"
+
+This solution uses:
+
+The index() method to find the first occurrence of "needle"
+An f-string to format the output message
+
+The function is concise because:
+
+Python's index() method does all the heavy lifting of finding the element
+It will automatically raise a ValueError if "needle" isn't found
+The f-string makes string formatting clean and readable
+
+
+Here are some interesting problems that make good use of Python's index() method:
+
+First and Last Occurrence
+
+def find_first_last(arr, target):
+    return {
+        'first': arr.index(target),
+        'last': len(arr) - 1 - arr[::-1].index(target)
+    }
+
+# Example
+numbers = [1, 2, 3, 4, 2, 5, 2]
+print(find_first_last(numbers, 2))  # Output: {'first': 1, 'last': 6}
+
+Find Peak Element (element larger than neighbors)
+
+def find_peak(arr):
+    for i in range(1, len(arr)-1):
+        if arr[i] > arr[i-1] and arr[i] > arr[i+1]:
+            return f"Peak found at position {i}: value {arr[i]}"
+    return "No peak found"
+
+# Example
+numbers = [1, 3, 7, 4, 3, 6, 2]
+print(find_peak(numbers))  # Output: "Peak found at position 2: value 7"
+
+Find Missing Letter
+
+def find_missing_letter(chars):
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    start_idx = alphabet.index(chars[0].lower())
+    for i, char in enumerate(chars):
+        if char.lower() != alphabet[start_idx + i]:
+            return alphabet[start_idx + i]
+            
+# Example
+letters = ['a', 'b', 'c', 'e']
+print(find_missing_letter(letters))  # Output: "d"
+
+First Non-Repeating Character
+
+def first_unique_char(s):
+    for char in s:
+        if s.index(char) == s.rindex(char):  # index() finds first occurrence, rindex() finds last
+            return f"First unique character '{char}' found at position {s.index(char)}"
+    return "No unique characters found"
+
+# Example
+text = "leetcode"
+print(first_unique_char(text))  # Output: "First unique character 'l' found at position 0"
+
+Find Closest Match
+
+def find_closest(target, words):
+    # Returns word that starts with characters closest to target in alphabet
+    sorted_words = sorted(words)
+    idx = 0
+    while idx < len(sorted_words) and sorted_words[idx] < target:
+        idx += 1
+    if idx == 0:
+        return sorted_words[0]
+    if idx == len(sorted_words):
+        return sorted_words[-1]
+    return min(sorted_words[idx-1], sorted_words[idx], 
+              key=lambda x: abs(ord(x[0]) - ord(target[0])))
+
+# Example
+word_list = ["apple", "banana", "cherry", "date"]
+print(find_closest("boy", word_list))  # Output: "banana"
